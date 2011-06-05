@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# install ruby and chef
+rvm install ruby-1.8.7
+rvm use ruby-1.8.7
+gem install chef
+
+# create git repo to push changes to the instance
+repo=$(cat $EC2_GIT_BOOTSTRAP_PATH/data/chef-repo)
+git clone $repo chef-repo
+

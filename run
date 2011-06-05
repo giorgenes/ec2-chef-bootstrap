@@ -1,0 +1,16 @@
+#!/bin/bash
+
+chefuser=chef4
+
+# install dependency packages
+apt-get -y install curl build-essential bison openssl \
+	libreadline6 libreadline6-dev curl git-core \
+	zlib1g zlib1g-dev libssl-dev libyaml-dev \
+	libsqlite3-0 libsqlite3-dev sqlite3 \
+	libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev
+
+adduser --disabled-password --quiet --gecos '' $chefuser
+cp -r bin /home/$chefuser/
+chown -R $chefuser:$chefuser /home/$chefuser/bin
+su -c ./bin/rvm-install -l $chefuser
+su -c ./bin/chef-install -l $chefuser
