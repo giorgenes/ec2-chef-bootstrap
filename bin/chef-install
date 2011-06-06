@@ -6,9 +6,9 @@ rvm use ruby-1.8.7
 gem install chef
 
 # create git repo to push changes to the instance
-repo=$(cat $EC2_GIT_BOOTSTRAP_PATH/chef-repo)
+repo=$(cat $1/chef-repo)
 mkdir $HOME/.ssh
-cp $EC2_GIT_BOOTSTRAP_PATH/chef-id_rsa $HOME/.ssh/id_rsa
+cp $1/chef-id_rsa $HOME/.ssh/id_rsa
 chmod 400 $HOME/.ssh/id_rsa
 export GIT_SSH=$HOME/bin/git-ssh-wrap.sh
 git clone $repo chef-repo
