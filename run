@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chefuser=chef4
+chefuser=chef
 
 # install dependency packages
 apt-get -y install curl build-essential bison openssl \
