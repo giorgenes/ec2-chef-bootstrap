@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# load rvm
+. "$HOME/.rvm/scripts/rvm"
+
 # install ruby and chef
 rvm install ruby-1.8.7
 rvm use ruby-1.8.7
