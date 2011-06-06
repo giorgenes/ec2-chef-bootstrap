@@ -2,4 +2,7 @@
 
 # install RVM
 bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+url -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer
+chmod +x rvm-installer
+./rvm-installer --version 1.6.18
 echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >> ~/.bash_profile
