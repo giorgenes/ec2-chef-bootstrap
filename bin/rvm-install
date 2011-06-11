@@ -3,5 +3,5 @@
 # install RVM
 curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer
 chmod +x rvm-installer
-./rvm-installer --version 1.6.18
+./rvm-installer --version latest
 echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >> $HOME/.bash_profile
